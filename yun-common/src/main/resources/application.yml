@@ -1,0 +1,17 @@
+server:
+    port: 9090
+        
+spring: 
+    datasource: 
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://rm-bp1u67e316odxhj5g.mysql.rds.aliyuncs.com:3306/jfpt_zc_kf?autoReconnect=true
+        username: jfpt_zc_kf
+        password: xKAbUALCHQdPVPZxnwobpkfRUayoGJS9
+
+mybatis: 
+    mapperLocations: classpath*:xml/**/*.xml
+    typeAliasesPackage: com.ancun.yunsmail.persistence.model
+    basePackage: com.ancun.yunsmail.persistence.mapper
+      
+logging:  
+    file: /var/open/common/info.log
