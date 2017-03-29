@@ -16,7 +16,6 @@ import com.open.yun.common.constants.Constants;
 import com.open.yun.common.exception.SystemException;
 import com.open.yun.common.exception.SystemExceptionEnum;
 import com.open.yun.common.utils.IpUtils;
-import com.open.yun.common.utils.WebUtils;
 
 /**
  * ip白名单
@@ -53,10 +52,10 @@ public class SecurityApiHandler extends HandlerInterceptorAdapter{
 			throw new SystemException(SystemExceptionEnum.HTTP_METHOD_MUST_BE_POST);
 		}
 		
-		//签名
-		String sign = WebUtils.getHeaderDecode(request, Constants.SIGN, encoding);
-		request.setAttribute(Constants.REQUEST_SIGN, sign);
-		log.debug("sign:" + sign);
+//		//签名
+//		String sign = WebUtils.getHeaderDecode(request, Constants.SIGN, encoding);
+//		request.setAttribute(Constants.REQUEST_SIGN, sign);
+//		log.debug("sign:" + sign);
 		
 		//获取请求体
 		String fileupload = request.getHeader(Constants.FILE_UPLOAD);
