@@ -27,7 +27,8 @@ public class DataSourceConfig {
 				.create(this.properties.getClassLoader())
 				.driverClassName(this.properties.getDriverClassName())
 				.url(this.properties.getUrl()).username(this.properties.getUsername())
-				.password(DESUtils.decrypt(properties.getPassword(), null));
+				.password(properties.getPassword());
+//				.password(DESUtils.decrypt(properties.getPassword(), null));
 		if (this.properties.getType() != null) {
 			factory.type(this.properties.getType());
 		}
